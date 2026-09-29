@@ -282,3 +282,103 @@ details.src ul{margin:8px 0 0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media print{.tool-slot,.vlist,.reflect{display:none!important}}
 [hidden]{display:none!important}
+
+/* ===== v0.3 look: taken from the Baya design (mindserian.baya.my, 28/09/2026) =====
+   Light, calm teal palette; soft rounded cards; rounded buttons. Same colours as the Baya build. */
+:root{
+  --bg:#F7FAF9; --surface:#FFFFFF; --ink:#1F3A40; --muted:#4A6368; --line:#D9E7E4;
+  --primary:#176B73; --primary-hover:#12565C; --primary-soft:#EAF4F2; --mist-line:#BFDCD6; --sage:#8FBFAE;
+  --accent:#12565C; --accent-soft:#DCEEF2;
+  --warm:#F4EBDD; --warm-line:#E6D5BC; --warm-ink:#5C4424;
+  --danger:#B42318; --danger-hover:#8F1C13; --danger-soft:#FDECEA; --danger-ink:#7A1A12;
+  --amber-soft:#F4EBDD; --amber-line:#E6D5BC; --amber-ink:#5C4424;
+  --orb-a:#8FBFAE; --orb-ring:rgba(23,107,115,.10); --sunk:#EEF5F3;
+  --radius:24px; --radius-s:16px;
+  --shadow:0 20px 25px -5px rgba(23,107,115,.05),0 8px 10px -6px rgba(23,107,115,.05);
+}
+body{background:var(--bg);color:var(--ink)}
+h1{font-size:30px;letter-spacing:-.02em;color:var(--ink)}
+h2{letter-spacing:-.01em;color:var(--ink)}
+p,li{color:inherit}
+main p,main li{color:var(--muted)}
+main strong{color:var(--ink);font-weight:650}
+a{color:var(--primary);font-weight:600;text-decoration-color:var(--sage);text-underline-offset:3px}
+a:hover{color:var(--primary-hover)}
+.lead{color:var(--muted)}
+/* eyebrow pill (Baya section label) */
+.eyebrow{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);
+  font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:0 0 10px}
+.accent{color:var(--primary)}
+/* cards */
+.card,.choice,.step,.contact,.next,details.cw,.breathe,.guide,.myth,.video{border-radius:var(--radius);border-color:var(--line);box-shadow:var(--shadow)}
+.card{padding:18px 20px}
+.choice{min-height:84px;padding:18px}
+.choice:hover,.next:hover{border-color:var(--primary)}
+.choice .ic{border-radius:var(--radius-s);background:var(--primary-soft);color:var(--primary)}
+.choice.help{background:var(--danger);box-shadow:0 10px 20px -8px rgba(180,35,24,.45)}
+.sign,.say-col,.checks label,.popts label{border-radius:var(--radius-s)}
+.sign{background:var(--bg)}
+.sign h3{color:var(--primary);letter-spacing:.08em}
+/* callout boxes */
+.key{background:var(--primary-soft);border:1px solid var(--mist-line);border-left:6px solid var(--primary);border-radius:var(--radius-s);color:var(--ink)}
+.key small{color:var(--primary);letter-spacing:.1em}
+.tealbox{background:var(--primary-soft);border:1px solid var(--mist-line);border-radius:var(--radius-s)}
+.note{background:var(--accent-soft);border:1px solid var(--mist-line);border-radius:var(--radius-s);color:var(--ink)}
+.warn{background:var(--danger-soft);border:1.5px solid var(--danger);border-radius:var(--radius-s);color:var(--danger-ink)}
+.warn p,.warn li{color:var(--danger-ink)}
+.warn h2,.warn h3{color:var(--danger)}
+.try,.amber{background:var(--warm);border:1px solid var(--warm-line);border-radius:var(--radius-s);color:var(--warm-ink)}
+.try p,.amber p,.amber li{color:var(--warm-ink)}
+.staff-banner{background:var(--accent-soft);border-color:var(--mist-line);border-radius:var(--radius-s)}
+.reflect{background:var(--primary-soft);border-radius:var(--radius-s)}
+/* buttons: rounded (Baya), bold, soft shadow */
+.btn,.call{border-radius:12px;font-weight:700;box-shadow:0 4px 6px -1px rgba(23,60,64,.10),0 2px 4px -2px rgba(23,60,64,.08)}
+.btn{background:var(--primary);border-color:var(--primary)}
+.btn:hover{background:var(--primary-hover);border-color:var(--primary-hover);color:#fff}
+.btn.sec,.breathe .btn.ghost,.guide .btn.ghost{background:#fff;color:var(--primary);border:1.5px solid var(--primary);box-shadow:none}
+.btn.sec:hover{background:var(--primary-soft);color:var(--primary-hover)}
+.btn.danger{background:#fff;color:var(--danger);border:1.5px solid var(--danger);box-shadow:none}
+.call{background:var(--primary)}
+.call:hover{background:var(--primary-hover);color:#fff}
+.call.red{background:var(--danger)}
+.call.red:hover{background:var(--danger-hover)}
+.chip{border-radius:12px}
+.chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary)}
+.path{border-radius:999px;border-color:var(--mist-line);color:var(--ink);font-weight:600;background:#fff}
+.path:hover{background:var(--primary-soft);border-color:var(--primary);color:var(--primary-hover)}
+.chip.ready{background:var(--primary-soft);color:var(--primary)}
+.chip.soon-c{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.mods a{font-weight:600;color:var(--ink)}
+.mods a::after{color:var(--primary)}
+/* header & bottom bar */
+header.site{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px)}
+.brand-name{color:var(--primary);font-weight:800;letter-spacing:-.01em}
+.lang-btn{border-radius:12px;border-color:var(--mist-line)}
+nav.bar{border-top-color:var(--line);box-shadow:0 -6px 16px rgba(23,107,115,.06)}
+nav.bar a[aria-current="page"]{background:var(--primary-soft);color:var(--primary)}
+nav.bar a.sos{border-radius:14px}
+.draft{background:var(--warm);color:var(--warm-ink);border-bottom-color:var(--warm-line)}
+/* exercises */
+.gcard{background:var(--primary-soft);border-radius:var(--radius-s)}
+.gbar i{background:var(--primary)}
+.breathe .orb{background:radial-gradient(circle at 50% 45%,var(--orb-a),var(--primary))}
+/* video cards (Baya style) */
+.video{background:#fff;overflow:hidden}
+.vbox{position:relative;background:linear-gradient(135deg,#176B73 0%,#5FA8A0 55%,#8FBFAE 100%)}
+.vplay{width:56px;height:56px;min-height:0;padding:0;border-radius:50%;background:var(--primary);color:#fff;font-size:0;display:grid;place-items:center;
+  box-shadow:0 10px 15px -3px rgba(0,0,0,.2);border:3px solid rgba(255,255,255,.9);transition:transform .2s}
+.vplay:hover{transform:scale(1.08)}
+.vplay::before{content:"";margin-left:4px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.vplay span,.vplay [lang]{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.vbadge{position:absolute;top:12px;left:12px;border-radius:999px;background:rgba(255,255,255,.95);padding:2px 10px;font-size:11px;font-weight:700;color:var(--accent)}
+.vdur{position:absolute;bottom:12px;right:12px;border-radius:6px;background:rgba(31,58,64,.8);padding:2px 8px;font-size:11px;font-weight:600;color:#fff}
+.video figcaption{padding:16px 18px}
+.video figcaption b{color:var(--ink);font-size:16px;line-height:1.35}
+.vlist{gap:16px}
+/* v0.3 fixes */
+.choice.help,.choice.help strong{color:#fff}
+.choice.help span.d{color:#FFE3E0}
+.choice span.d,.brand-sub,footer.site a,.next small,.video figcaption small{font-weight:400}
+.choice span.d{color:var(--muted)}
+.choice.help span.d{color:#FFE3E0}
+.brand-sub{color:var(--muted)}

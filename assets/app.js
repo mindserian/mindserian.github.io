@@ -264,7 +264,8 @@
       f.src = "https://www.youtube-nocookie.com/embed/" + fig.getAttribute("data-yt") + "?autoplay=1&rel=0&hl=" + lang();
       f.title = fig.querySelector("figcaption b").textContent.trim();
       f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullscreen = true;
-      b.parentNode.replaceChild(f, b);
+      var box = b.parentNode; box.querySelectorAll(".vbadge,.vdur").forEach(function (x) { x.remove(); });
+      box.replaceChild(f, b);
     });
   });
 

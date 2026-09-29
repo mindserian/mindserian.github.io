@@ -1,5 +1,5 @@
 /* Laman Minda offline support. Pages are saved on the phone so the help page works without signal. */
-var CACHE = "laman-minda-v0.2-202609291900";
+var CACHE = "laman-minda-v0.3-202609292009";
 var FILES = [
  "./",
  "index.html",
