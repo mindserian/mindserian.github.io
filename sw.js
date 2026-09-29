@@ -1,5 +1,5 @@
 /* Laman Minda offline support. Pages are saved on the phone so the help page works without signal. */
-var CACHE = "laman-minda-v0.3-202609292009";
+var CACHE = "laman-minda-v0.3-202609292058";
 var FILES = [
  "./",
  "index.html",
@@ -23,7 +23,7 @@ var FILES = [
  "modul-pernafasan-perlahan.html",
  "grounding.html",
  "relaksasi-otot.html",
- "jeda-1-minit.html",
+ "rehat-1-minit.html",
  "meditasi-nafas.html",
  "imbasan-badan.html",
  "tempat-tenang.html",
